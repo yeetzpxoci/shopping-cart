@@ -257,8 +257,7 @@ input {
     font-family: 'Playfair Display', serif;
     text-align: center;
     background: transparent;
-    border: none;
-    border-bottom: double;
+    border: double;
 }
 
 input[type=number] {

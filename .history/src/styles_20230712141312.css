@@ -258,7 +258,6 @@ input {
     text-align: center;
     background: transparent;
     border: none;
-    border-bottom: double;
 }
 
 input[type=number] {

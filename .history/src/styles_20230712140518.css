@@ -319,7 +319,7 @@ input[type=number] {
     font-size: 4rem;
     color: white;
     font-family: 'Playfair Display', serif;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.2);
     border: double;
     padding: 1rem;
 }

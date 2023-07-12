@@ -163,7 +163,7 @@ button {
     overflow: hidden;
     transition: width 2s;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1635447697416-77dd49b90856?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-image: url('https://img.freepik.com/free-photo/wooden-table-product-background_53876-89456.jpg?w=1380&t=st=1689088356~exp=1689088956~hmac=2e4b3224d1699023cb488d66607d3bcb7e5575f9f8c8ccce7ed5da92b4294657');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -319,7 +319,7 @@ input[type=number] {
     font-size: 4rem;
     color: white;
     font-family: 'Playfair Display', serif;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.2);
     border: double;
     padding: 1rem;
 }

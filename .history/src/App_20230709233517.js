@@ -1,0 +1,21 @@
+import './styles.css'
+import RouteSwitch from './RouteSwitch';
+import { useState } from 'react';
+
+function App() {
+    const products = [{ name: 'Sashimi', url: 'https://pngimg.com/d/sushi_PNG9219.png'}, 
+        { name: 'Nigirizushi', url: 'https://i0.wp.com/maru-finest-sushi.de/wp-content/uploads/2021/05/M20_single-a.png?fit=500%2C500&ssl=1'}, 'Makizushi', 'Uramakizushi', 'Temakizushi', 'Chirashizushi'];
+    const [cart, setCart] = useState([])
+
+    function addToCart(product){
+        let newCart = [...cart];
+        newCart.push(product);
+        setCart(newCart);
+    }
+
+    return (
+        <RouteSwitch products={products} cart={cart}/>
+    );
+}
+
+export default App;

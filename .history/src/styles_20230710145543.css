@@ -1,0 +1,190 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+html,
+body,
+#root
+{
+    height: 100%;
+}
+
+#shop-content, #home-content {
+    height: 100%;
+}
+
+#header {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 3rem;
+}
+
+#logo-home, #logo-shop {
+    font-size: 8rem;
+    font-family: 'Playfair Display', serif;
+    padding: 0;
+}
+
+#logo-home {
+    color: black;
+}
+
+#logo-shop {
+    color: white;
+}
+
+#header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    width: 9rem;
+    background-color: aqua;
+}
+
+#shopping-cart-button {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 3rem;
+    width: 3rem;
+}
+
+#shopping-cart-button {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/263/263142.png');
+}
+
+#home-button-white, #contact-button-white {
+    color: white;
+}
+
+#home-content {
+    background-image: url('https://images7.alphacoders.com/408/408462.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#shop-background-img {
+    height: 100%;
+    width: 100%;
+    background-image: url('https://img.freepik.com/free-photo/close-up-japanese-street-food-shop_23-2149288391.jpg?w=1480&t=st=1688984379~exp=1688984979~hmac=2e45cfcd1ff6d270801c3ce311ea9881742683ef79f4c3d6ca4c033422d260ed');
+    background-size: cover;
+    filter: blur(2px);
+    position: absolute;
+    z-index: -1;
+}
+
+#shop-content {
+    
+}
+
+#products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    height: 85%;
+}
+
+#product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    width: 16rem;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    border: double;
+    border-width: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sushi-img {
+    height: 10rem;
+    width: 10rem;
+}

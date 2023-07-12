@@ -87,7 +87,7 @@ function App() {
         <>
         <RouteSwitch products={products} removeProduct={removeProduct} addProduct={addProduct} setProduct={setProduct} 
         shoppingCartOn={shoppingCartOn} toggleShoppingCart={toggleShoppingCart}/>
-        <ShoppingCart products={products} shoppingCart={shoppingCart} shoppingCartOn={shoppingCartOn} deleteProduct={deleteProduct}>
+        <ShoppingCart products={products} shoppingCartOn={shoppingCartOn} deleteProduct={deleteProduct}>
         </ShoppingCart>
         </>
     );

@@ -28,7 +28,7 @@ function ShoppingCart(props) {
 
     return (
         <div id={shoppingCardID}>
-            {productsDiv}
+            {products}
             <h1 id="total-text">Total: ${getTotalPrice()}</h1>
             <button onClick={() => alert('Thank you!')}>Checkout</button>
         </div>

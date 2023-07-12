@@ -30,12 +30,9 @@ function App() {
             product.name === productName && product.amount !== 0) ? {...product, amount: product.amount - 1} : product)
         setProducts(newProducts);
 
-        let newShoppingCart = [...shoppingCart];
-
         const index = shoppingCart.indexOf(productName);
         if (index > -1) {
-            newShoppingCart.splice(index, 1)
-            setShoppingCart(newShoppingCart);
+            shoppingCart.splice(index, 1)
         }
     }
 
@@ -45,11 +42,8 @@ function App() {
             product.name === productName ? {...product, amount: product.amount + 1} : product);
         setProducts(newProducts);
 
-        let newShoppingCart = [...shoppingCart];
-
         if (!shoppingCart.includes(productName)) {
-            newShoppingCart.push(productName);
-            setShoppingCart(newShoppingCart);
+            shoppingCart.push(productName);
         }
     }
 
@@ -59,20 +53,6 @@ function App() {
         let newProducts = products.map(product =>
             product.name === productName ? { ...product, amount: parseInt(e.target.value) } : product);
         setProducts(newProducts);
-
-        const index = shoppingCart.indexOf(productName);
-        let newShoppingCart = [...shoppingCart];
-
-        if (e.target.value === 0) {
-            if (index > -1) {
-                newShoppingCart.splice(index, 1)
-            }
-        } else {
-            if (!(index > -1)) {
-                newShoppingCart.push(productName);
-            }
-        }
-        setShoppingCart(newShoppingCart);
     }
 
     function deleteProduct(productName, e) {
@@ -87,7 +67,7 @@ function App() {
         <>
         <RouteSwitch products={products} removeProduct={removeProduct} addProduct={addProduct} setProduct={setProduct} 
         shoppingCartOn={shoppingCartOn} toggleShoppingCart={toggleShoppingCart}/>
-        <ShoppingCart products={products} shoppingCart={shoppingCart} shoppingCartOn={shoppingCartOn} deleteProduct={deleteProduct}>
+        <ShoppingCart products={products} shoppingCartOn={shoppingCartOn} deleteProduct={deleteProduct}>
         </ShoppingCart>
         </>
     );

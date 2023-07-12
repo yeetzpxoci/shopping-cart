@@ -30,12 +30,9 @@ function App() {
             product.name === productName && product.amount !== 0) ? {...product, amount: product.amount - 1} : product)
         setProducts(newProducts);
 
-        let newShoppingCart = [...shoppingCart];
-
         const index = shoppingCart.indexOf(productName);
         if (index > -1) {
-            newShoppingCart.splice(index, 1)
-            setShoppingCart(newShoppingCart);
+            shoppingCart.splice(index, 1)
         }
     }
 
@@ -48,8 +45,7 @@ function App() {
         let newShoppingCart = [...shoppingCart];
 
         if (!shoppingCart.includes(productName)) {
-            newShoppingCart.push(productName);
-            setShoppingCart(newShoppingCart);
+            shoppingCart.push(productName);
         }
     }
 
@@ -87,7 +83,7 @@ function App() {
         <>
         <RouteSwitch products={products} removeProduct={removeProduct} addProduct={addProduct} setProduct={setProduct} 
         shoppingCartOn={shoppingCartOn} toggleShoppingCart={toggleShoppingCart}/>
-        <ShoppingCart products={products} shoppingCart={shoppingCart} shoppingCartOn={shoppingCartOn} deleteProduct={deleteProduct}>
+        <ShoppingCart products={products} shoppingCartOn={shoppingCartOn} deleteProduct={deleteProduct}>
         </ShoppingCart>
         </>
     );

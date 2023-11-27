@@ -4,7 +4,7 @@ function ShoppingCart(props) {
     const productsDiv = products.map(product => product.amount !== 0 ? 
         (
         <div id='product-card-shopping-cart'>
-            <img class='sushi-img-shopping-cart' src={product.url}></img>
+            <img class='sushi-img-shopping-cart' src={product.url} alt="sushi"></img>
             <span>{product.name}</span>
             <span className="amount">x{product.amount}</span>
             <span>${product.price * product.amount}</span>
